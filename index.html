@@ -96,48 +96,48 @@
       </tbody>
     </table>
     <br />
-    <form>
+    <form action="./about/index.html" method="get">
       <fieldset>
         <legend>My first form</legend>
-        <p>
+        <div>
           <label for="name">Name</label><br />
           <input id="name" type="text" name="name" placeholder="Your name" />
-        </p>
-        <p>
+        </div>
+        <div>
           <label for="email">Email</label><br />
           <input id="email" type="text" name="email" placeholder="Your email" />
-        </p>
-        <p>
+        </div>
+        <div>
           <label for="password">Password</label><br />
           <input id="password" type="password" name="password" />
-        </p>
-        <p>
+        </div>
+        <div>
           <label for="level">Your programming level</label><br />
           <input id="level" type="range" name="level" min="0" max="10" />
-        </p>
+        </div>
         <p>What does HTML stand for?</p>
-        <p>
+        <div>
           <input id="HTML1" type="checkbox" name="meaningHTML" value="1" />
           <label for="HTML1">Hyperlinks and Text Markup Language</label><br />
           <input id="HTML2" type="checkbox" name="meaningHTML" value="2" />
           <label for="HTML2">Home Tool Markup Language</label><br />
           <input id="HTML3" type="checkbox" name="meaningHTML" value="3" />
           <label for="HTML3">Hyper Text Markup Language</label><br />
-        </p>
+        </div>
         <p>What does HTTP stand for?</p>
-        <p>
+        <div>
           <input id="HTTP1" type="radio" name="meaningHTTP" value="1" />
           <label for="HTTP1">Hyper Text Translate Protocol</label><br />
           <input id="HTTP2" type="radio" name="meaningHTTP" value="2" />
           <label for="HTTP2">Hyper Text Transmission Protocol</label><br />
           <input id="HTTP3" type="radio" name="meaningHTTP" value="3" />
           <label for="HTTP3">Hyper Text Transfer Protocol</label><br />
-        </p>
-        <p>
+        </div>
+        <div>
           <label for="comment">Comment</label><br />
           <textarea id="comment" name="comment">Comment</textarea>
-        </p>
-        <p>
+        </div>
+        <div>
           <label for="select_html">What does HTML stand for?</label><br />
           <select name="select_html" id="select_html">
             <option disabled selected>Your answer</option>
@@ -145,8 +145,9 @@
             <option value="2">Home Tool Markup Language</option>
             <option value="3">Hyper Text Markup Language</option>
           </select>
-        </p>
-        <button>Send</button>
+        </div>
+        <br />
+        <button formtarget="_blank">Send</button>
       </fieldset>
     </form>
   </body>
