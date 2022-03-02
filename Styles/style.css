@@ -1,13 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+@import url("./fonts.css");
 
-.content {
-  width: 1440px;
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.offer_container {
+  margin: 0 auto;
+  padding: 120px 16px 0;
+  max-width: 1440px;
   height: 570px;
 }
 
-.headline_text {
-  padding-top: 120px;
-  margin: 0 567px 20px 567px;
+.title {
+  text-align: center;
+  margin-bottom: 20px;
   font-size: 40px;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -17,66 +24,71 @@
   width: 100px;
   height: 4px;
   background-color: #f5bd41;
-  margin: 20px 0 0 670px;
+  margin: 0 auto;
 }
 
-.support,
-.communication,
-.booking,
-.reviews :nth-child(2) {
+.row {
+  display: flex;
+  margin-top: 80px;
   font-size: 24px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
 
-.support {
-  position: absolute;
-  margin: 80px 0 0 104px;
+.item {
+  width: 25%;
+  text-align: center;
 }
 
-.support img {
-  margin: 0 0 52px 110px;
+.support_img {
+  margin: 4px 110px 52px 110px;
 }
 
-.support p {
-  margin: 0 0 0 77px;
-}
-
-.communication {
-  position: absolute;
-  margin: 80px 0 0 416px;
-}
-
-.communication img {
+.communication_img {
   margin: 8px 107px 56px 105px;
 }
 
-.communication p {
-  margin: 0 0 0 30px;
+.booking_img {
+  margin: 17px 98px 65px 98px;
 }
 
-.booking {
-  position: absolute;
-  margin: 80px 0 0 728px;
+.reviews_img {
+  margin: 4px 102px 60px 102px;
 }
 
-.booking img {
-  margin: 16px 10px 65px 100px;
+.footer_container {
+  background-color: #10367c;
+  color: #fff;
+  margin: 0 auto;
+  padding: 120px 16px 0 104px;
+  max-width: 1440px;
+  height: 630px;
 }
 
-.booking p {
-  margin: 0 64px 8px 90px;
+.info {
+  display: flex;
 }
 
-.reviews {
-  position: absolute;
-  margin: 80px 0 0 1040px;
+.col-titles {
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
 }
 
-.reviews img {
-  margin: 5px 102px 60px 102px;
+.col-titles ~ p {
+  margin: 22px 0;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
 }
 
-.reviews p {
-  margin: 0 35px 8px 50px;
+.property {
+  padding: 0 283px 0 223px;
+}
+
+.bottom_inscription {
+  padding-top: 40px;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
 }
