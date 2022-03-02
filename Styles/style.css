@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
+.content {
+  width: 1440px;
+  height: 570px;
+}
+
+.headline_text {
+  padding-top: 120px;
+  margin: 0 567px 20px 567px;
+  font-size: 40px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+.stroke {
+  width: 100px;
+  height: 4px;
+  background-color: #f5bd41;
+  margin: 20px 0 0 670px;
+}
+
+.support,
+.communication,
+.booking,
+.reviews :nth-child(2) {
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.support {
+  position: absolute;
+  margin: 80px 0 0 104px;
+}
+
+.support img {
+  margin: 0 0 52px 110px;
+}
+
+.support p {
+  margin: 0 0 0 77px;
+}
+
+.communication {
+  position: absolute;
+  margin: 80px 0 0 416px;
+}
+
+.communication img {
+  margin: 8px 107px 56px 105px;
+}
+
+.communication p {
+  margin: 0 0 0 30px;
+}
+
+.booking {
+  position: absolute;
+  margin: 80px 0 0 728px;
+}
+
+.booking img {
+  margin: 16px 10px 65px 100px;
+}
+
+.booking p {
+  margin: 0 64px 8px 90px;
+}
+
+.reviews {
+  position: absolute;
+  margin: 80px 0 0 1040px;
+}
+
+.reviews img {
+  margin: 5px 102px 60px 102px;
+}
+
+.reviews p {
+  margin: 0 35px 8px 50px;
+}
