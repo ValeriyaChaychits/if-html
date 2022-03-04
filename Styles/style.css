@@ -5,9 +5,14 @@
   box-sizing: border-box;
 }
 
+body {
+  background: #e5e5e5;
+}
+
 .offer_container {
+  background: #fff;
   margin: 0 auto;
-  padding: 120px 16px 0;
+  padding: 120px 95px 0;
   max-width: 1440px;
   height: 570px;
 }
@@ -41,19 +46,19 @@
 }
 
 .support_img {
-  margin: 4px 110px 52px 110px;
+  margin: 4px 110px 46px 110px;
 }
 
 .communication_img {
-  margin: 8px 107px 56px 105px;
+  margin: 8px 107px 50px 105px;
 }
 
 .booking_img {
-  margin: 17px 98px 65px 98px;
+  margin: 17px 98px 57px 98px;
 }
 
 .reviews_img {
-  margin: 4px 102px 60px 102px;
+  margin: 4px 102px 53px 102px;
 }
 
 .footer_container {
