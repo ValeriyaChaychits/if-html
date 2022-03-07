@@ -10,165 +10,58 @@
     <link rel="stylesheet" href="./Styles/style.css" />
   </head>
   <body>
-    <h1>Моя первая страница</h1>
-    <p><a href="./about/" target="_blank">Об авторе</a></p>
-    <hr />
-    <img
-      src="https://html5book.ru/wp-content/uploads/2014/03/html_text.png"
-      alt="HTML5"
-    />
-    <ol>
-      <li>
-        Знакомство с Web
-        <ul>
-          <li>Краткая история Web и как устроен интернет</li>
-          <li>Как устроен браузер и как он получает страницы по сети</li>
-          <li>Что такое Git</li>
-          <li>Создание первого репозитория</li>
-          <li>О файле .gitignore</li>
-        </ul>
-      </li>
-      <li>
-        HTML-вёрстка – первые шаги
-        <ul>
-          <li>Настройка рабочей среды</li>
-          <li>Краткая история HTML</li>
-          <li>Типы тегов и атрибуты</li>
-          <li>Теги для работы с текстом</li>
-          <li>Создание собственной страницы</li>
-          <li>Основы ветвления в Git</li>
-          <li>Создание pull request на GitHub</li>
-        </ul>
-      </li>
-      <li>
-        Погружение в HTML-разметку
-        <ul>
-          <li>Мета-теги</li>
-          <li>Мнемоники</li>
-          <li>Теги для работы со списками</li>
-          <li>Теги для работы с таблицами</li>
-          <li>Теги для работы с формами</li>
-          <li>div и span</li>
-        </ul>
-      </li>
-    </ol>
-    <table border="1" width="65%">
-      <thead>
-        <tr>
-          <th>Tag</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>&lt;table&gt;</td>
-          <td>Defines a table</td>
-        </tr>
-        <tr>
-          <td>&lt;tr&gt;</td>
-          <td>Defines a row in a table</td>
-        </tr>
-        <tr>
-          <td>&lt;th&gt;</td>
-          <td rowspan="2">Defines a "header cell" / "cell" in a table</td>
-        </tr>
-        <tr>
-          <td>&lt;td&gt;</td>
-        </tr>
-        <tr>
-          <td colspan="2">Rarely used</td>
-        </tr>
-        <tr>
-          <td>&lt;caption&gt;</td>
-          <td>Defines a table caption</td>
-        </tr>
-        <tr>
-          <td>&lt;thead&gt;</td>
-          <td>Groups the header content in a table</td>
-        </tr>
-        <tr>
-          <td>&lt;tbody&gt;</td>
-          <td>Groups the body content in a table</td>
-        </tr>
-        <tr>
-          <td>&lt;tfoot&gt;</td>
-          <td>Groups the footer content in a table</td>
-        </tr>
-      </tbody>
-    </table>
-    <br />
-    <form action="./about/index.html" method="get">
-      <fieldset>
-        <legend>My first form</legend>
-        <div>
-          <label for="name">Name</label><br />
-          <input id="name" type="text" name="name" placeholder="Your name" />
-        </div>
-        <div>
-          <label for="email">Email</label><br />
-          <input id="email" type="text" name="email" placeholder="Your email" />
-        </div>
-        <div>
-          <label for="password">Password</label><br />
-          <input id="password" type="password" name="password" />
-        </div>
-        <div>
-          <label for="level">Your programming level</label><br />
-          <input id="level" type="range" name="level" min="0" max="10" />
-        </div>
-        <p>What does HTML stand for?</p>
-        <div>
-          <input id="HTML1" type="checkbox" name="meaningHTML" value="1" />
-          <label for="HTML1">Hyperlinks and Text Markup Language</label><br />
-          <input id="HTML2" type="checkbox" name="meaningHTML" value="2" />
-          <label for="HTML2">Home Tool Markup Language</label><br />
-          <input id="HTML3" type="checkbox" name="meaningHTML" value="3" />
-          <label for="HTML3">Hyper Text Markup Language</label><br />
-        </div>
-        <p>What does HTTP stand for?</p>
-        <div>
-          <input id="HTTP1" type="radio" name="meaningHTTP" value="1" />
-          <label for="HTTP1">Hyper Text Translate Protocol</label><br />
-          <input id="HTTP2" type="radio" name="meaningHTTP" value="2" />
-          <label for="HTTP2">Hyper Text Transmission Protocol</label><br />
-          <input id="HTTP3" type="radio" name="meaningHTTP" value="3" />
-          <label for="HTTP3">Hyper Text Transfer Protocol</label><br />
-        </div>
-        <div>
-          <label for="comment">Comment</label><br />
-          <textarea id="comment" name="comment">Comment</textarea>
-        </div>
-        <div>
-          <label for="select_html">What does HTML stand for?</label><br />
-          <select name="select_html" id="select_html">
-            <option disabled selected>Your answer</option>
-            <option value="1">Hyperlinks and Text Markup Language</option>
-            <option value="2">Home Tool Markup Language</option>
-            <option value="3">Hyper Text Markup Language</option>
-          </select>
-        </div>
-        <br />
-        <button formtarget="_blank">Send</button>
-      </fieldset>
-    </form>
-    <div class="content">
-      <p class="headline_text">What do we offer</p>
+    <div class="offer_container">
+      <h1 class="title">What do we offer</h1>
       <div class="stroke"></div>
-      <div class="support">
-        <img src="./images/support.png" alt="support" />
-        <p>Support 24/7</p>
+      <div class="row">
+        <div class="item">
+          <img class="support_img" src="./images/support.png" alt="support" />
+          <p>Support 24/7</p>
+        </div>
+        <div class="item">
+          <img
+            class="communication_img"
+            src="./images/communication.png"
+            alt="communication"
+          />
+          <p>Communicate directly</p>
+        </div>
+        <div class="item">
+          <img class="booking_img" src="./images/booking.png" alt="booking" />
+          <p>Book online</p>
+        </div>
+        <div class="item">
+          <img class="reviews_img" src="./images/reviews.png" alt="reviews" />
+          <p>Real guest reviews</p>
+        </div>
       </div>
-      <div class="communication">
-        <img src="./images/communication.png" alt="communication" />
-        <p>Communicate directly</p>
+    </div>
+    <div class="footer_container">
+      <div class="info">
+        <div class="col about">
+          <h2 class="col-titles">About</h2>
+          <p>How Triphouse works</p>
+          <p>Careers</p>
+          <p>Privacy</p>
+          <p>Terms</p>
+        </div>
+        <div class="col property">
+          <h2 class="col-titles">Property types</h2>
+          <p>Guest houses</p>
+          <p>Hotels</p>
+          <p>Apartments</p>
+          <p>Villas</p>
+          <p>Holiday homes</p>
+          <p>Hostels</p>
+        </div>
+        <div class="col support">
+          <h2 class="col-titles">Support</h2>
+          <p>Contact Customer Service</p>
+          <p>FAQ</p>
+        </div>
       </div>
-      <div class="booking">
-        <img src="./images/booking.png" alt="booking" />
-        <p>Book online</p>
-      </div>
-      <div class="reviews">
-        <img src="./images/reviews.png" alt="reviews" />
-        <p>Real guest reviews</p>
+      <div class="bottom_inscription">
+        &copy; 2020 Triphouse, Inc. All rights reserved
       </div>
     </div>
   </body>
