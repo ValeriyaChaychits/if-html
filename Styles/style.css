@@ -5,8 +5,124 @@
   box-sizing: border-box;
 }
 
-body {
-  background: #e5e5e5;
+.top_section_background {
+  background: #1212123f url("../images/castelmezzano.png");
+  background-size: 100%;
+}
+
+.top_section {
+  margin: 0 auto;
+  max-width: 1440px;
+  color: #fff;
+}
+
+.top_section_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  padding: 50px 104px 0;
+}
+
+.top_section_header_logo {
+  margin-right: 659px;
+}
+
+.top_section_header_icon {
+  margin-right: 22px;
+}
+
+.top_section_header_line {
+  width: 50px;
+  height: 4px;
+  background-color: #f5bd41;
+  margin: 4px 0 0 998px;
+}
+
+.top_section_main {
+  margin: 194px 0 0 104px;
+}
+
+.top_section_main_title {
+  font-size: 50px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+.top_section_main_paragraphs {
+  display: flex;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.top_section_main_paragraphs > p {
+  padding: 100px 196px 24px 25px;
+}
+
+.top_section_main_info {
+  width: 1232px;
+  height: 64px;
+  color: #383838;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  border: 3px solid #f3f3f4;
+  border-right: none;
+  border-radius: 8px;
+}
+
+.main_info_destination {
+  padding: 22px 332px 22px 26px;
+}
+
+.main_info_date {
+  width: 260px;
+  height: 64px;
+  border: 3px solid #f5bd41;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main_info_apartment_type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main_info_search_button {
+  width: 190px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3077c6;
+  color: #fff;
+  font-size: 24px;
+  border-radius: 8px;
+}
+
+.top_section_apps {
+  display: flex;
+  justify-content: center;
+  padding: 119px 0;
+}
+
+.top_section_apps_first,
+.top_section_apps_second {
+  height: 40px;
+}
+
+.top_section_apps_first {
+  margin-right: 16px;
 }
 
 .offer_container {
@@ -17,7 +133,7 @@ body {
   height: 570px;
 }
 
-.title {
+.offer_container_title {
   text-align: center;
   margin-bottom: 20px;
   font-size: 40px;
@@ -25,14 +141,14 @@ body {
   font-weight: 500;
 }
 
-.stroke {
+.offer_container_stroke {
   width: 100px;
   height: 4px;
   background-color: #f5bd41;
   margin: 0 auto;
 }
 
-.row {
+.offer_container_row {
   display: flex;
   margin-top: 80px;
   font-size: 24px;
@@ -40,29 +156,33 @@ body {
   font-weight: 400;
 }
 
-.item {
+.offer_container_item {
   width: 25%;
   text-align: center;
 }
 
-.support_img {
+.offer_container_first_item_img {
   margin: 4px 110px 46px 110px;
 }
 
-.communication_img {
+.offer_container_second_item_img {
   margin: 8px 107px 50px 105px;
 }
 
-.booking_img {
+.offer_container_third_item_img {
   margin: 17px 98px 57px 98px;
 }
 
-.reviews_img {
+.offer_container_fourth_item_img {
   margin: 4px 102px 53px 102px;
 }
 
-.footer_container {
+.footer_container_background {
   background-color: #10367c;
+  background-size: 100%;
+}
+
+.footer_container {
   color: #fff;
   margin: 0 auto;
   padding: 120px 16px 0 104px;
@@ -70,28 +190,28 @@ body {
   height: 630px;
 }
 
-.info {
+.footer_info {
   display: flex;
 }
 
-.col-titles {
+.footer_info_col-titles {
   font-size: 20px;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
 }
 
-.col-titles ~ p {
-  margin: 22px 0;
+.footer_info_col-titles ~ p {
+  margin: 24px 0;
   font-size: 20px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
 
-.property {
+.footer_info_col_middle {
   padding: 0 283px 0 223px;
 }
 
-.bottom_inscription {
+.footer_bottom_inscription {
   padding-top: 40px;
   font-size: 14px;
   font-family: "Roboto", sans-serif;
