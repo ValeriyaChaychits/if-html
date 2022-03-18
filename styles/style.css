@@ -15,6 +15,7 @@
 .header_background {
   background: #1212123f url("../images/castelmezzano.png");
   background-size: 100%;
+  min-height: 100vh;
 }
 
 .nav_header {
@@ -83,7 +84,7 @@ button {
   font-size: 18px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  border: 0 solid #fff;
+  border: none;
   border-radius: 8px;
 }
 
@@ -143,11 +144,12 @@ button {
   font-weight: 500;
 }
 
-hr {
+.offer_container_line {
   width: 100px;
   height: 4px;
   background-color: #f5bd41;
   margin: 0 auto;
+  border: none;
 }
 
 .offer_container_row {
@@ -174,13 +176,17 @@ hr {
 }
 
 .offer_container_item a:hover {
-  color: #124fb7;
+  font-size: 23px;
 }
 
 /*FOOTER BLOCK*/
 .footer_background {
   background-color: #10367c;
   background-size: 100%;
+}
+
+.footer_info_logo_img {
+  display: none;
 }
 
 .footer_info {
@@ -354,9 +360,48 @@ hr {
 }
 
 @media only screen and (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+    margin: 0;
+    max-width: 360px;
+  }
+
   .offer_container_item {
     width: 100%;
     margin-bottom: 70px;
+  }
+
+  .footer_info_logo_img {
+    display: block;
+    margin: 0 auto;
+    padding: 40px 0 40px;
+  }
+
+  .footer_info {
+    display: flex;
+    justify-content: center;
+    padding-top: 0;
+  }
+
+  .footer_info_col {
+    height: 20px;
+    margin-bottom: 0;
+    padding: 0 8px 0 8px;
+  }
+
+  .footer_info_col_titles {
+    font-size: 15px;
+    text-decoration: underline;
+  }
+
+  .footer_info_lists {
+    display: none;
+  }
+
+  .footer_bottom_inscription {
+    padding: 32px 0 40px 0;
+    text-align: center;
+    font-size: 12px;
   }
 }
 
