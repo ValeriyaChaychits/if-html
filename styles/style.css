@@ -66,6 +66,34 @@
   width: 100%;
 }
 
+.title {
+  color: #383838;
+  text-align: center;
+  padding: 120px 0 20px 0;
+  font-size: 40px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  position: relative;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  left: calc(50% - 100px / 2);
+  top: 100%;
+  font-size: 40px;
+  width: 0;
+  height: 4px;
+  background-color: #f5bd41;
+  border: none;
+  margin: 0 auto;
+  transition: width 0.3s ease-out;
+}
+
+.title:hover::after {
+  width: 100px;
+}
+
 /*HEADER BLOCK*/
 .header_background {
   background: #1212123f url("../images/castelmezzano.png");
@@ -74,7 +102,6 @@
 }
 
 .nav_header {
-  color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -89,12 +116,23 @@
   color: #fff;
   text-decoration: none;
   display: flex;
-  align-items: center;
+  position: relative;
 }
 
-.nav_header > a:hover {
-  border-bottom: #f5bd41 4px solid;
-  line-height: 40px;
+.nav_header > a::after {
+  content: " ";
+  position: absolute;
+  left: calc(50% - 100px / 2);
+  top: 135%;
+  width: 0;
+  height: 3px;
+  background-color: #f5bd41;
+  transition: width 0.3s;
+}
+
+.nav_header > a:hover::after {
+  width: 50px;
+  margin-left: 25px;
 }
 
 .nav_header_logo_svg {
@@ -104,11 +142,18 @@
   width: 205px;
 }
 
+.nav_header_logo_link:hover::after {
+  display: none;
+}
+
+.nav_header_attractions_link {
+  margin-right: 20px;
+}
+
 .nav_header_night_svg {
   fill: #fff;
   width: 30px;
   height: 30px;
-  margin-left: 20px;
 }
 
 .nav_header_account_svg {
@@ -211,35 +256,18 @@ button {
 }
 
 /*What do we offer BLOCK*/
-.offer_container_title {
-  color: #383838;
-  text-align: center;
-  padding: 120px 0 20px 0;
-  font-size: 40px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-}
-
-.offer_container_line {
-  width: 100px;
-  height: 4px;
-  background-color: #f5bd41;
-  margin: 0 auto;
-  border: none;
-}
-
-.offer_container_row {
+.offer_row {
   display: flex;
-  margin: 88px 0 124px 0;
+  margin: 88px 0 96px 0;
 }
 
-.offer_container_item {
+.offer_item {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  height: 170px;
+  height: 196px;
   font-size: 24px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -266,13 +294,55 @@ button {
   fill: #3077c6;
 }
 
-.offer_container_item a {
+.offer_item a {
   text-decoration: none;
   color: #383838;
 }
 
-.offer_container_item a:hover {
+.offer_item a:hover {
   font-size: 23px;
+}
+
+/*HOMES BLOCK*/
+.homes_background {
+  background-color: #eaf0f9;
+  background-size: 100%;
+}
+
+.homes_row {
+  display: flex;
+  justify-content: space-between;
+  padding: 84px 0 120px 0;
+  position: relative;
+}
+
+.homes_item {
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.homes_item > img,
+p {
+  margin-bottom: 20px;
+}
+
+.homes_item_title {
+  color: #3077c6;
+}
+
+.homes_item_place {
+  color: #bfbfbf;
+}
+
+.homes_arrow {
+  position: absolute;
+  top: 33%;
+  left: 98%;
+}
+
+.homes_arrow_media {
+  display: none;
 }
 
 /*FOOTER BLOCK*/
@@ -339,6 +409,20 @@ button {
   }
 }
 
+@media only screen and (max-width: 1439px) {
+  .col-3 {
+    width: 50%;
+  }
+
+  .homes_row {
+    flex-wrap: wrap;
+  }
+
+  .homes_arrow {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 1025px) and (max-width: 1280px) {
   .footer_info {
     padding-right: 40px;
@@ -346,13 +430,17 @@ button {
 }
 
 @media screen and (min-width: 841px) and (max-width: 1024px) {
-  .offer_container_row {
+  .offer_row {
     flex-wrap: wrap;
   }
 
   .col-3 {
     width: 50%;
     margin-bottom: 70px;
+  }
+
+  .homes_row {
+    flex-wrap: wrap;
   }
 
   .footer_info {
@@ -366,18 +454,22 @@ button {
 }
 
 @media only screen and (max-width: 840px) {
-  .offer_container_row {
+  .offer_row {
     flex-wrap: wrap;
     margin-bottom: 0;
   }
 
-  .offer_container_line {
+  .offer_line {
     display: none;
   }
 
   .col-3 {
     width: 100%;
     margin-bottom: 70px;
+  }
+
+  .homes_item {
+    margin: 0 auto;
   }
 
   .footer_info {
@@ -408,7 +500,46 @@ button {
   .container {
     padding: 0 16px;
     margin: 0;
-    max-width: 360px;
+  }
+
+  .title {
+    font-size: 28px;
+    padding: 32px 0;
+  }
+
+  .title::after {
+    display: none;
+  }
+
+  .offer_row {
+    margin-top: 12px;
+  }
+
+  .homes_row {
+    margin: 0 auto;
+    padding: 0 0 32px 0;
+  }
+
+  .homes_item {
+    display: none;
+  }
+
+  .homes_item_media {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 0 8px;
+  }
+
+  .homes_item > p {
+    font-size: 16px;
+  }
+
+  .homes_arrow_media {
+    display: block;
+    position: absolute;
+    top: 20%;
+    left: 93%;
   }
 
   .footer_info_logo_img {

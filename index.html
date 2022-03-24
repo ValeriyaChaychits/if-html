@@ -331,11 +331,13 @@
       <div class="header_background">
         <div class="container">
           <nav class="nav_header">
-            <svg class="nav_header_logo_svg">
-              <use href="#nav_header_logo" />
-            </svg>
+            <a class="nav_header_logo_link" href="#">
+              <svg class="nav_header_logo_svg">
+                <use href="#nav_header_logo" />
+              </svg>
+            </a>
             <a href="#">Stays</a>
-            <a href="#">Attractions</a>
+            <a class="nav_header_attractions_link" href="#">Attractions</a>
             <a href="#">
               <svg class="nav_header_night_svg">
                 <use href="#nav_header_night" />
@@ -394,10 +396,9 @@
       </div>
     </header>
     <div class="container">
-      <h1 class="offer_container_title">What do we offer</h1>
-      <hr class="offer_container_line" />
-      <div class="offer_container_row">
-        <div class="offer_container_item col-3">
+      <h2 class="title">What do we offer</h2>
+      <div class="offer_row">
+        <div class="offer_item col-3">
           <a href="#">
             <svg class="offer_item_support_svg">
               <use href="#offer_item_support" />
@@ -405,7 +406,7 @@
           </a>
           <p><a href="#">Support 24/7</a></p>
         </div>
-        <div class="offer_container_item col-3">
+        <div class="offer_item col-3">
           <a href="#">
             <svg class="offer_item_communication_svg">
               <use href="#offer_item_communication" />
@@ -413,7 +414,7 @@
           </a>
           <p><a href="#">Communicate directly</a></p>
         </div>
-        <div class="offer_container_item col-3">
+        <div class="offer_item col-3">
           <a href="#">
             <svg class="offer_item_booking_svg">
               <use href="#offer_item_booking" />
@@ -421,13 +422,52 @@
           </a>
           <p><a href="#">Book online</a></p>
         </div>
-        <div class="offer_container_item col-3">
+        <div class="offer_item col-3">
           <a href="#">
             <svg class="offer_item_reviews_svg">
               <use href="#offer_item_reviews" />
             </svg>
           </a>
           <p><a href="#">Real guest reviews</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="homes_background">
+      <div class="container">
+        <h2 class="title">Homes guests loves</h2>
+        <div class="homes_row">
+          <div class="homes_item homes_item_media">
+            <img src="./images/hotel_leopold.png" alt="Hotel Leopold" />
+            <p class="homes_item_title">Hotel Leopold</p>
+            <p class="homes_item_place">Saint Petersburg, Russia</p>
+          </div>
+          <div class="homes_item homes_item_media">
+            <img
+              src="./images/apartment_sunshine.png"
+              alt="Apartment Sunshine"
+            />
+            <p class="homes_item_title">Apartment Sunshine</p>
+            <p class="homes_item_place">
+              Santa Cruz de Tenerife,<br />
+              Spain
+            </p>
+          </div>
+          <div class="homes_item">
+            <img src="./images/villa_kunerad.png" alt="Villa Kunerad" />
+            <p class="homes_item_title">Villa Kunerad</p>
+            <p class="homes_item_place">Vysokie Tatry, Slowakia</p>
+          </div>
+          <div class="homes_item">
+            <img src="./images/hostel_friendship.png" alt="Hostel Friendship" />
+            <p class="homes_item_title">Hostel Friendship</p>
+            <p class="homes_item_place">Berlin, Germany</p>
+          </div>
+          <div class="homes_arrow">
+            <img src="./images/arrow.png" alt="arrow" />
+          </div>
+          <div class="homes_arrow_media">
+            <img src="./images/arrow_media.png" alt="arrow" />
+          </div>
         </div>
       </div>
     </div>
@@ -439,7 +479,7 @@
           </svg>
           <div class="footer_info">
             <div class="footer_info_col col-4">
-              <a href="#"><h2 class="footer_info_col_titles">About</h2></a>
+              <a href="#"><h3 class="footer_info_col_titles">About</h3></a>
               <ul class="footer_info_lists">
                 <li><a href="#">How Triphouse works</a></li>
                 <li><a href="#">Careers</a></li>
@@ -449,7 +489,7 @@
             </div>
             <div class="footer_info_col col-4">
               <a href="#"
-                ><h2 class="footer_info_col_titles">Property types</h2></a
+                ><h3 class="footer_info_col_titles">Property types</h3></a
               >
               <ul class="footer_info_lists">
                 <li><a href="#">Guest houses</a></li>
@@ -461,7 +501,7 @@
               </ul>
             </div>
             <div class="footer_info_col col-4">
-              <a href="#"><h2 class="footer_info_col_titles">Support</h2></a>
+              <a href="#"><h3 class="footer_info_col_titles">Support</h3></a>
               <ul class="footer_info_lists">
                 <li><a href="#">Contact Customer Service</a></li>
                 <li><a href="#">FAQ</a></li>
