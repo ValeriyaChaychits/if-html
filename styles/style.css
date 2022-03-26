@@ -5,6 +5,15 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: Roboto, sans-serif;
+  color: #383838;
+}
+
+button {
+  font-family: Roboto, sans-serif;
+}
+
 .container {
   margin: 0 auto;
   max-width: 1440px;
@@ -67,11 +76,9 @@
 }
 
 .title {
-  color: #383838;
   text-align: center;
-  padding: 120px 0 20px 0;
+  padding: 120px 0 20px;
   font-size: 40px;
-  font-family: "Roboto", sans-serif;
   font-weight: 500;
   position: relative;
 }
@@ -87,14 +94,14 @@
   background-color: #f5bd41;
   border: none;
   margin: 0 auto;
-  transition: width 0.3s ease-out;
+  transition: width 0.5s ease-out;
 }
 
 .title:hover::after {
   width: 100px;
 }
 
-/*HEADER BLOCK*/
+/* HEADER BLOCK */
 .header_background {
   background: #1212123f url("../images/castelmezzano.png");
   background-size: 100%;
@@ -106,7 +113,6 @@
   align-items: center;
   justify-content: space-between;
   font-size: 24px;
-  font-family: "Roboto", sans-serif;
   font-weight: 400;
   padding-top: 50px;
   height: 96px;
@@ -127,7 +133,7 @@
   width: 0;
   height: 3px;
   background-color: #f5bd41;
-  transition: width 0.3s;
+  transition: width 0.4s;
 }
 
 .nav_header > a:hover::after {
@@ -163,20 +169,18 @@
 }
 
 .header_main {
-  margin: 200px 0 0 0;
+  margin: 200px 0 0;
   color: #fff;
 }
 
 .header_main_title {
   font-size: 50px;
-  font-family: "Roboto", sans-serif;
   font-weight: 500;
 }
 
 .header_main_labels {
   display: flex;
   font-size: 18px;
-  font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
 
@@ -186,7 +190,6 @@
 
 .header_main_info {
   height: 64px;
-  color: #383838;
   background-color: #fff;
   display: flex;
   justify-content: space-between;
@@ -194,9 +197,8 @@
 }
 
 .header_main_info > input,
-button {
+.main_info_search_button {
   font-size: 18px;
-  font-family: "Roboto", sans-serif;
   font-weight: 400;
   border: none;
   border-radius: 8px;
@@ -226,8 +228,8 @@ button {
   color: #fff;
   border-radius: 8px;
   font-size: 24px;
-  font-family: "Roboto", sans-serif;
   font-weight: 500;
+  transition: all 0.2s ease-out;
 }
 
 .main_info_search_button:hover {
@@ -255,10 +257,10 @@ button {
   height: 40px;
 }
 
-/*What do we offer BLOCK*/
+/* What do we offer BLOCK */
 .offer_row {
   display: flex;
-  margin: 88px 0 96px 0;
+  margin: 88px 0 96px;
 }
 
 .offer_item {
@@ -269,7 +271,6 @@ button {
   text-align: center;
   height: 196px;
   font-size: 24px;
-  font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
 
@@ -303,7 +304,7 @@ button {
   font-size: 23px;
 }
 
-/*HOMES BLOCK*/
+/* HOMES BLOCK */
 .homes_background {
   background-color: #eaf0f9;
   background-size: 100%;
@@ -312,13 +313,12 @@ button {
 .homes_row {
   display: flex;
   justify-content: space-between;
-  padding: 84px 0 120px 0;
+  padding: 84px 0 120px;
   position: relative;
 }
 
 .homes_item {
   font-size: 24px;
-  font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
 
@@ -345,7 +345,134 @@ p {
   display: none;
 }
 
-/*FOOTER BLOCK*/
+/* DESTINATIONS BLOCK */
+.destinations_buttons {
+  margin-top: 84px;
+  background-color: #f3f3f4;
+  border-radius: 8px;
+  width: 624px;
+}
+
+.destinations_button {
+  background-color: #f3f3f4;
+  border-radius: 8px;
+  border: none;
+  padding: 0;
+  width: 192px;
+  height: 64px;
+  font-size: 24px;
+  font-weight: 400;
+  color: #383838;
+  transition: all 0.3s ease-out;
+}
+
+.destinations_button:hover {
+  background-color: #3077c6;
+  color: #fff;
+}
+
+.destinations_button_regions {
+  background-color: #3077c6;
+  color: #fff;
+}
+
+.destinations_button_places {
+  width: 232px;
+}
+
+.destinations_row {
+  margin-top: 64px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  font-weight: 400;
+  color: #3077c6;
+  position: relative;
+}
+
+.destinations_item > img,
+p {
+  margin-bottom: 20px;
+}
+
+.destinations_item_img {
+  position: relative;
+}
+
+.destinations_filter {
+  background-color: rgba(56, 56, 56, 0.4);
+  width: 294px;
+  height: 296px;
+  position: absolute;
+}
+
+.destinations_booking_button {
+  position: absolute;
+  top: 33%;
+  left: 7%;
+  font-size: 18px;
+  font-weight: 400;
+  width: 128px;
+  height: 48px;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #3077c6;
+  border: 1px solid #3077c6;
+  transition: all 0.3s ease-out;
+}
+
+.destinations_booking_button:hover {
+  background-color: #3077c6;
+  color: #fff;
+}
+
+.destinations_arrow {
+  padding: 28px 0 120px;
+  display: flex;
+  justify-content: center;
+}
+
+/* SING UP BLOCK*/
+.sing_up_container {
+  height: 200px;
+  padding: 24px;
+  background-color: #eaf0f9;
+}
+
+.sing_up_cross {
+  float: right;
+}
+
+.sing_up_main {
+  height: 152px;
+  display: flex;
+  align-items: center;
+}
+
+.sing_up_main_info {
+  padding-left: 24px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.sing_up_button {
+  font-size: 18px;
+  font-weight: 400;
+  width: 128px;
+  height: 48px;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #3077c6;
+  border: 1px solid #3077c6;
+  transition: all 0.3s ease-out;
+}
+
+.sing_up_button:hover {
+  background-color: #3077c6;
+  color: #fff;
+}
+
+/* FOOTER BLOCK */
 .footer_background {
   background-color: #10367c;
   background-size: 100%;
@@ -370,13 +497,13 @@ p {
   color: #fff;
   text-decoration: none;
   font-size: 20px;
-  font-family: "Roboto", sans-serif;
   font-weight: 400;
   margin: 24px 0;
+  transition: all 0.3s ease-out;
 }
 
 .footer_info_col a:hover {
-  color: #cecece;
+  color: #3077c6;
 }
 
 .footer_info_lists {
@@ -390,7 +517,6 @@ p {
 
 .footer_info_col_titles {
   font-size: 20px;
-  font-family: "Roboto", sans-serif;
   font-weight: 500;
 }
 
@@ -398,11 +524,10 @@ p {
   color: #fff;
   padding: 40px 0 120px;
   font-size: 14px;
-  font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
 
-/*@media queries*/
+/* @media queries */
 @media only screen and (min-width: 1440px) {
   .container {
     max-width: 1440px;
@@ -517,7 +642,7 @@ p {
 
   .homes_row {
     margin: 0 auto;
-    padding: 0 0 32px 0;
+    padding: 0 0 32px;
   }
 
   .homes_item {
@@ -545,7 +670,7 @@ p {
   .footer_info_logo_img {
     display: block;
     margin: 0 auto;
-    padding: 40px 0 40px;
+    padding: 40px 0;
     height: 100px;
     width: 98px;
     fill: #fff;
@@ -576,7 +701,7 @@ p {
   }
 
   .footer_bottom_inscription {
-    padding: 12px 0 40px 0;
+    padding: 12px 0 40px;
     text-align: center;
     font-size: 12px;
   }
