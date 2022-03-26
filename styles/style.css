@@ -11,6 +11,61 @@
   padding: 0 104px;
 }
 
+.sprites {
+  position: absolute;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.col-1 {
+  width: 8.33%;
+}
+
+.col-2 {
+  width: 16.66%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-5 {
+  width: 41.66%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33%;
+}
+
+.col-11 {
+  width: 91.66%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
 /*HEADER BLOCK*/
 .header_background {
   background: #1212123f url("../images/castelmezzano.png");
@@ -33,23 +88,37 @@
 .nav_header > a {
   color: #fff;
   text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 
 .nav_header > a:hover {
   border-bottom: #f5bd41 4px solid;
-  line-height: 56px;
+  line-height: 40px;
 }
 
-.top_section_header_logo {
+.nav_header_logo_svg {
   margin-right: 659px;
+  fill: #3077c6;
+  height: 40px;
+  width: 205px;
 }
 
-.nav_header > a:nth-child(3) {
-  margin-right: 20px;
+.nav_header_night_svg {
+  fill: #fff;
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+}
+
+.nav_header_account_svg {
+  fill: #fff;
+  width: 40px;
+  height: 40px;
 }
 
 .header_main {
-  margin: 194px 0 0 0;
+  margin: 200px 0 0 0;
   color: #fff;
 }
 
@@ -67,7 +136,7 @@
 }
 
 .header_main_labels > label {
-  padding: 100px 196px 24px 25px;
+  padding: 96px 196px 24px 25px;
 }
 
 .header_main_info {
@@ -130,8 +199,15 @@ button {
   padding: 119px 0;
 }
 
-.header_app {
+.header_app_first_svg {
   margin-right: 16px;
+  width: 135px;
+  height: 40px;
+}
+
+.header_app_second_svg {
+  width: 120px;
+  height: 40px;
 }
 
 /*What do we offer BLOCK*/
@@ -154,7 +230,7 @@ button {
 
 .offer_container_row {
   display: flex;
-  margin: 84px 0 124px 0;
+  margin: 88px 0 124px 0;
 }
 
 .offer_container_item {
@@ -163,11 +239,31 @@ button {
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  width: 25%;
   height: 170px;
   font-size: 24px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
+}
+
+.offer_item_support_svg {
+  height: 92px;
+  fill: #3077c6;
+}
+
+.offer_item_communication_svg {
+  height: 84px;
+  fill: #3077c6;
+}
+
+.offer_item_booking_svg {
+  width: 100px;
+  height: 84px;
+  fill: #3077c6;
+}
+
+.offer_item_reviews_svg {
+  height: 80px;
+  fill: #3077c6;
 }
 
 .offer_container_item a {
@@ -193,11 +289,11 @@ button {
   color: #fff;
   display: flex;
   justify-content: space-between;
-  padding: 120px 168px 0 0;
+  padding-top: 120px;
 }
 
 .footer_info_col {
-  height: 310px;
+  padding-bottom: 40px;
 }
 
 .footer_info_col a {
@@ -230,7 +326,7 @@ button {
 
 .footer_bottom_inscription {
   color: #fff;
-  padding: 65px 0 120px 0;
+  padding: 40px 0 120px;
   font-size: 14px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -251,111 +347,60 @@ button {
 
 @media screen and (min-width: 841px) and (max-width: 1024px) {
   .offer_container_row {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 50% 50%;
+    flex-wrap: wrap;
   }
 
-  .offer_container_item {
-    width: 100%;
+  .col-3 {
+    width: 50%;
     margin-bottom: 70px;
   }
 
   .footer_info {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 50% 50%;
+    flex-wrap: wrap;
     padding: 120px 0 0 28px;
   }
 
-  .footer_info_col {
-    margin-bottom: 50px;
-  }
-
-  .footer_bottom_inscription {
-    padding-top: 0;
+  .col-4 {
+    width: 50%;
   }
 }
 
 @media only screen and (max-width: 840px) {
   .offer_container_row {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(4, 25%);
+    flex-wrap: wrap;
+    margin-bottom: 0;
   }
 
-  .offer_container_item {
+  .offer_container_line {
+    display: none;
+  }
+
+  .col-3 {
     width: 100%;
     margin-bottom: 70px;
   }
 
   .footer_info {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 50% 50%;
+    flex-wrap: wrap;
     padding: 120px 0 0 28px;
   }
 
-  .footer_info_col {
-    margin-bottom: 50px;
-  }
-
-  .footer_bottom_inscription {
-    padding-top: 0;
+  .col-4 {
+    width: 50%;
   }
 }
 
 @media only screen and (max-width: 720px) {
-  .offer_container_row {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(4, 25%);
-  }
-
-  .offer_container_item {
-    width: 100%;
-    margin-bottom: 70px;
-  }
-
   .footer_info {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(3, 33.33333%);
-    padding: 120px 0 0 28px;
+    flex-wrap: wrap;
+  }
+
+  .col-4 {
+    width: 100%;
   }
 
   .footer_info_col_titles {
     text-align: center;
-  }
-
-  .footer_bottom_inscription {
-    padding-top: 0;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .offer_container_item {
-    width: 100%;
-    margin-bottom: 70px;
-  }
-
-  .footer_info {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(3, 33.33333%);
-    padding: 120px 0 0 0;
-  }
-
-  .footer_info_col {
-    margin-bottom: 50px;
-  }
-
-  .footer_info_col_titles {
-    text-align: center;
-  }
-
-  .footer_bottom_inscription {
-    padding-top: 0;
   }
 }
 
@@ -366,27 +411,28 @@ button {
     max-width: 360px;
   }
 
-  .offer_container_item {
-    width: 100%;
-    margin-bottom: 70px;
-  }
-
   .footer_info_logo_img {
     display: block;
     margin: 0 auto;
     padding: 40px 0 40px;
+    height: 100px;
+    width: 98px;
+    fill: #fff;
   }
 
   .footer_info {
-    display: flex;
     justify-content: center;
-    padding-top: 0;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+
+  .col-4 {
+    width: 30%;
   }
 
   .footer_info_col {
     height: 20px;
     margin-bottom: 0;
-    padding: 0 8px 0 8px;
   }
 
   .footer_info_col_titles {
@@ -399,21 +445,8 @@ button {
   }
 
   .footer_bottom_inscription {
-    padding: 32px 0 40px 0;
+    padding: 12px 0 40px 0;
     text-align: center;
     font-size: 12px;
-  }
-}
-
-@media only screen and (max-width: 360px) {
-  .offer_container_row {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(4, 25%);
-  }
-
-  .offer_container_item {
-    width: 100%;
-    margin-bottom: 70px;
   }
 }
