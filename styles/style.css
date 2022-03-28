@@ -432,6 +432,10 @@ p {
   justify-content: center;
 }
 
+.destinations_arrow_media {
+  display: none;
+}
+
 /* SING UP BLOCK*/
 .sing_up_container {
   height: 200px;
@@ -439,8 +443,16 @@ p {
   background-color: #eaf0f9;
 }
 
-.sing_up_cross {
+.sing_up_cross_img {
   float: right;
+}
+
+.sing_up_cross_media {
+  display: none;
+}
+
+.sing_up_logo_media {
+  display: none;
 }
 
 .sing_up_main {
@@ -453,6 +465,14 @@ p {
   padding-left: 24px;
   font-size: 24px;
   font-weight: 500;
+}
+
+.sing_up_main_info_media {
+  display: none;
+}
+
+.sing_up_main_info_linebreak {
+  display: none;
 }
 
 .sing_up_button {
@@ -470,6 +490,10 @@ p {
 .sing_up_button:hover {
   background-color: #3077c6;
   color: #fff;
+}
+
+.sing_up_button_media {
+  display: none;
 }
 
 /* FOOTER BLOCK */
@@ -543,12 +567,38 @@ p {
     flex-wrap: wrap;
   }
 
+  .destinations_row {
+    flex-wrap: wrap;
+  }
+
   .homes_arrow {
     display: none;
   }
 }
 
+@media screen and (min-width: 1281px) and (max-width: 1389px) {
+  .destinations_filter {
+    display: none;
+  }
+
+  .destinations_booking_button {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 1025px) and (max-width: 1280px) {
+  .destinations_row {
+    flex-wrap: wrap;
+  }
+
+  .destinations_filter {
+    display: none;
+  }
+
+  .destinations_booking_button {
+    display: none;
+  }
+
   .footer_info {
     padding-right: 40px;
   }
@@ -566,6 +616,18 @@ p {
 
   .homes_row {
     flex-wrap: wrap;
+  }
+
+  .destinations_row {
+    flex-wrap: wrap;
+  }
+
+  .destinations_filter {
+    display: none;
+  }
+
+  .destinations_booking_button {
+    display: none;
   }
 
   .footer_info {
@@ -597,6 +659,19 @@ p {
     margin: 0 auto;
   }
 
+  .destinations_row {
+    display: flex;
+    justify-content: center;
+  }
+
+  .destinations_filter {
+    display: none;
+  }
+
+  .destinations_booking_button {
+    display: none;
+  }
+
   .footer_info {
     flex-wrap: wrap;
     padding: 120px 0 0 28px;
@@ -608,6 +683,31 @@ p {
 }
 
 @media only screen and (max-width: 720px) {
+  .destinations_buttons {
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  .destinations_button {
+    width: 30%;
+    height: 32px;
+    border: 1px solid #f3f3f4;
+    border-radius: 4px;
+    background-color: #fff;
+  }
+
+  .destinations_button_regions {
+    background-color: #3077c6;
+    color: #fff;
+  }
+
+  .destinations_button_places_title {
+    display: none;
+  }
+
   .footer_info {
     flex-wrap: wrap;
   }
@@ -665,6 +765,119 @@ p {
     position: absolute;
     top: 20%;
     left: 93%;
+  }
+
+  .destinations_buttons {
+    margin-top: 0;
+  }
+
+  .destinations_button {
+    font-size: 19px;
+  }
+
+  .destinations_item {
+    display: none;
+  }
+
+  .destinations_filter {
+    display: none;
+  }
+
+  .destinations_booking_button {
+    display: none;
+  }
+
+  .destinations_arrow {
+    display: none;
+  }
+
+  .destinations_row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+    position: relative;
+  }
+
+  .destinations_item_media {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+  }
+
+  .destinations_item_media > p {
+    font-size: 12px;
+    margin-bottom: 40px;
+  }
+
+  .destinations_item > img {
+    margin-bottom: 8px;
+  }
+
+  .destinations_arrow_media {
+    display: block;
+    position: absolute;
+    top: 30%;
+    left: 95%;
+  }
+
+  .sing_up_container {
+    height: 106px;
+    padding: 24px 0;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .sing_up_main_user_icon {
+    display: none;
+  }
+
+  .sing_up_cross_img {
+    display: none;
+  }
+
+  .sing_up_cross_media {
+    display: block;
+    float: left;
+  }
+
+  .sing_up_logo_media {
+    display: block;
+  }
+
+  .sing_up_button_media {
+    display: block;
+    border: none;
+    background-color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    color: #3077c6;
+  }
+
+  .sing_up_button {
+    display: none;
+  }
+
+  .sing_up_main {
+    height: 58px;
+    display: flex;
+    align-items: center;
+  }
+
+  .sing_up_main_info {
+    padding-left: 0;
+    height: 28px;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  .sing_up_main_info_media {
+    display: contents;
+  }
+
+  .sing_up_main_info_linebreak {
+    display: flex;
   }
 
   .footer_info_logo_img {
