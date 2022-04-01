@@ -5,6 +5,15 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: Roboto, sans-serif;
+  color: #383838;
+}
+
+button {
+  font-family: Roboto, sans-serif;
+}
+
 .container {
   margin: 0 auto;
   max-width: 1440px;
@@ -67,11 +76,9 @@
 }
 
 .title {
-  color: #383838;
   text-align: center;
-  padding: 120px 0 20px 0;
+  padding: 120px 0 20px;
   font-size: 40px;
-  font-family: "Roboto", sans-serif;
   font-weight: 500;
   position: relative;
 }
@@ -87,14 +94,14 @@
   background-color: #f5bd41;
   border: none;
   margin: 0 auto;
-  transition: width 0.3s ease-out;
+  transition: width 0.5s ease-out;
 }
 
 .title:hover::after {
   width: 100px;
 }
 
-/*HEADER BLOCK*/
+/* HEADER BLOCK */
 .header_background {
   background: #1212123f url("../images/castelmezzano.png");
   background-size: 100%;
@@ -106,7 +113,6 @@
   align-items: center;
   justify-content: space-between;
   font-size: 24px;
-  font-family: "Roboto", sans-serif;
   font-weight: 400;
   padding-top: 50px;
   height: 96px;
@@ -127,7 +133,7 @@
   width: 0;
   height: 3px;
   background-color: #f5bd41;
-  transition: width 0.3s;
+  transition: width 0.4s;
 }
 
 .nav_header > a:hover::after {
@@ -163,20 +169,18 @@
 }
 
 .header_main {
-  margin: 200px 0 0 0;
+  margin: 200px 0 0;
   color: #fff;
 }
 
 .header_main_title {
   font-size: 50px;
-  font-family: "Roboto", sans-serif;
   font-weight: 500;
 }
 
 .header_main_labels {
   display: flex;
   font-size: 18px;
-  font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
 
@@ -186,7 +190,6 @@
 
 .header_main_info {
   height: 64px;
-  color: #383838;
   background-color: #fff;
   display: flex;
   justify-content: space-between;
@@ -194,9 +197,8 @@
 }
 
 .header_main_info > input,
-button {
+.main_info_search_button {
   font-size: 18px;
-  font-family: "Roboto", sans-serif;
   font-weight: 400;
   border: none;
   border-radius: 8px;
@@ -226,8 +228,8 @@ button {
   color: #fff;
   border-radius: 8px;
   font-size: 24px;
-  font-family: "Roboto", sans-serif;
   font-weight: 500;
+  transition: all 0.2s ease-out;
 }
 
 .main_info_search_button:hover {
@@ -255,10 +257,10 @@ button {
   height: 40px;
 }
 
-/*What do we offer BLOCK*/
+/* What do we offer BLOCK */
 .offer_row {
   display: flex;
-  margin: 88px 0 96px 0;
+  margin: 88px 0 96px;
 }
 
 .offer_item {
@@ -269,7 +271,6 @@ button {
   text-align: center;
   height: 196px;
   font-size: 24px;
-  font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
 
@@ -303,7 +304,7 @@ button {
   font-size: 23px;
 }
 
-/*HOMES BLOCK*/
+/* HOMES BLOCK */
 .homes_background {
   background-color: #eaf0f9;
   background-size: 100%;
@@ -312,18 +313,18 @@ button {
 .homes_row {
   display: flex;
   justify-content: space-between;
-  padding: 84px 0 120px 0;
+  padding: 84px 0 100px;
   position: relative;
 }
 
 .homes_item {
   font-size: 24px;
-  font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
 
 .homes_item > img,
-p {
+.homes_item_title,
+.homes_item_place {
   margin-bottom: 20px;
 }
 
@@ -345,7 +346,170 @@ p {
   display: none;
 }
 
-/*FOOTER BLOCK*/
+/* DESTINATIONS BLOCK */
+.destinations_buttons {
+  margin-top: 84px;
+  background-color: #f3f3f4;
+  border-radius: 8px;
+  width: 624px;
+}
+
+.destinations_button {
+  background-color: #f3f3f4;
+  border-radius: 8px;
+  border: none;
+  padding: 0;
+  width: 192px;
+  height: 64px;
+  font-size: 24px;
+  font-weight: 400;
+  color: #383838;
+  transition: all 0.3s ease-out;
+}
+
+.destinations_button:hover {
+  background-color: #3077c6;
+  color: #fff;
+}
+
+.destinations_button_regions {
+  background-color: #3077c6;
+  color: #fff;
+}
+
+.destinations_button_places {
+  width: 232px;
+}
+
+.destinations_row {
+  margin-top: 64px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  font-weight: 400;
+  color: #3077c6;
+  position: relative;
+}
+
+.destinations_item > p {
+  padding: 20px 0;
+}
+
+.destinations_item_filter {
+  position: relative;
+}
+
+.destinations_filter {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 98%;
+  background-color: rgba(56, 56, 56, 0.4);
+}
+
+.destinations_item_filter:hover .destinations_filter {
+  display: block;
+}
+
+.destinations_booking_button {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  font-weight: 400;
+  width: 44%;
+  height: 15%;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #3077c6;
+  border: 1px solid #3077c6;
+  transition: all 0.2s ease-out;
+}
+
+.destinations_item_filter:hover .destinations_booking_button {
+  display: block;
+}
+
+.destinations_booking_button:hover {
+  background-color: #3077c6;
+  color: #fff;
+}
+
+.destinations_arrow {
+  padding: 28px 0 120px;
+  display: flex;
+  justify-content: center;
+}
+
+.destinations_arrow_media {
+  display: none;
+}
+
+/* SING UP BLOCK*/
+.sing_up_container {
+  height: 200px;
+  padding: 24px;
+  background-color: #eaf0f9;
+}
+
+.sing_up_cross_img {
+  float: right;
+}
+
+.sing_up_cross_media {
+  display: none;
+}
+
+.sing_up_logo_media {
+  display: none;
+}
+
+.sing_up_main {
+  height: 152px;
+  display: flex;
+  align-items: center;
+}
+
+.sing_up_main_info {
+  padding-left: 24px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.sing_up_main_info_media {
+  display: none;
+}
+
+.sing_up_main_info_linebreak {
+  display: none;
+}
+
+.sing_up_button {
+  font-size: 18px;
+  font-weight: 400;
+  width: 128px;
+  height: 48px;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #3077c6;
+  border: 1px solid #3077c6;
+  transition: all 0.3s ease-out;
+}
+
+.sing_up_button:hover {
+  background-color: #3077c6;
+  color: #fff;
+}
+
+.sing_up_button_media {
+  display: none;
+}
+
+/* FOOTER BLOCK */
 .footer_background {
   background-color: #10367c;
   background-size: 100%;
@@ -370,13 +534,13 @@ p {
   color: #fff;
   text-decoration: none;
   font-size: 20px;
-  font-family: "Roboto", sans-serif;
   font-weight: 400;
   margin: 24px 0;
+  transition: all 0.3s ease-out;
 }
 
 .footer_info_col a:hover {
-  color: #cecece;
+  color: #3077c6;
 }
 
 .footer_info_lists {
@@ -390,7 +554,6 @@ p {
 
 .footer_info_col_titles {
   font-size: 20px;
-  font-family: "Roboto", sans-serif;
   font-weight: 500;
 }
 
@@ -398,11 +561,10 @@ p {
   color: #fff;
   padding: 40px 0 120px;
   font-size: 14px;
-  font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
 
-/*@media queries*/
+/* @media queries */
 @media only screen and (min-width: 1440px) {
   .container {
     max-width: 1440px;
@@ -418,12 +580,38 @@ p {
     flex-wrap: wrap;
   }
 
+  .destinations_row {
+    flex-wrap: wrap;
+  }
+
   .homes_arrow {
     display: none;
   }
 }
 
+@media screen and (min-width: 1281px) and (max-width: 1389px) {
+  .destinations_filter {
+    display: none;
+  }
+
+  .destinations_booking_button {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 1025px) and (max-width: 1280px) {
+  .destinations_row {
+    flex-wrap: wrap;
+  }
+
+  .destinations_filter {
+    display: none;
+  }
+
+  .destinations_booking_button {
+    display: none;
+  }
+
   .footer_info {
     padding-right: 40px;
   }
@@ -441,6 +629,18 @@ p {
 
   .homes_row {
     flex-wrap: wrap;
+  }
+
+  .destinations_row {
+    flex-wrap: wrap;
+  }
+
+  .destinations_filter {
+    display: none;
+  }
+
+  .destinations_booking_button {
+    display: none;
   }
 
   .footer_info {
@@ -472,6 +672,19 @@ p {
     margin: 0 auto;
   }
 
+  .destinations_row {
+    display: flex;
+    justify-content: center;
+  }
+
+  .destinations_filter {
+    display: none;
+  }
+
+  .destinations_booking_button {
+    display: none;
+  }
+
   .footer_info {
     flex-wrap: wrap;
     padding: 120px 0 0 28px;
@@ -483,6 +696,46 @@ p {
 }
 
 @media only screen and (max-width: 720px) {
+  .destinations_buttons {
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  .destinations_button {
+    width: 30%;
+    height: 32px;
+    border: 1px solid #f3f3f4;
+    border-radius: 4px;
+    background-color: #fff;
+  }
+
+  .destinations_button_regions {
+    background-color: #3077c6;
+    color: #fff;
+  }
+
+  .destinations_button_places_title {
+    display: none;
+  }
+
+  .sing_up_main_info {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .sing_up_main_user_icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .sing_up_cross_img {
+    width: 18px;
+    height: 18px;
+  }
+
   .footer_info {
     flex-wrap: wrap;
   }
@@ -517,7 +770,7 @@ p {
 
   .homes_row {
     margin: 0 auto;
-    padding: 0 0 32px 0;
+    padding: 0 0 32px;
   }
 
   .homes_item {
@@ -542,10 +795,125 @@ p {
     left: 93%;
   }
 
+  .destinations_buttons {
+    margin-top: 0;
+  }
+
+  .destinations_button {
+    font-size: 19px;
+  }
+
+  .destinations_item {
+    display: none;
+  }
+
+  .destinations_arrow {
+    display: none;
+  }
+
+  .destinations_row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+    position: relative;
+  }
+
+  .destinations_item_media {
+    display: block;
+    width: 48%;
+  }
+
+  .destinations_item_media > p {
+    font-size: 12px;
+    padding: 0;
+    margin: 8px 0 40px;
+  }
+
+  .destinations_item_filter > img {
+    width: 100%;
+  }
+
+  .destinations_filter {
+    height: 97%;
+  }
+
+  .destinations_booking_button {
+    font-size: 12px;
+    width: 55%;
+    height: 20%;
+  }
+
+  .destinations_arrow_media {
+    display: block;
+    position: absolute;
+    top: 30%;
+    left: 95%;
+  }
+
+  .sing_up_container {
+    height: 106px;
+    padding: 24px 0;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .sing_up_main_user_icon {
+    display: none;
+  }
+
+  .sing_up_cross_img {
+    display: none;
+  }
+
+  .sing_up_cross_media {
+    display: block;
+    float: left;
+  }
+
+  .sing_up_logo_media {
+    display: block;
+  }
+
+  .sing_up_button_media {
+    display: block;
+    border: none;
+    background-color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    color: #3077c6;
+  }
+
+  .sing_up_button {
+    display: none;
+  }
+
+  .sing_up_main {
+    height: 58px;
+    display: flex;
+    align-items: center;
+  }
+
+  .sing_up_main_info {
+    padding-left: 0;
+    height: 28px;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  .sing_up_main_info_media {
+    display: contents;
+  }
+
+  .sing_up_main_info_linebreak {
+    display: flex;
+  }
+
   .footer_info_logo_img {
     display: block;
     margin: 0 auto;
-    padding: 40px 0 40px;
+    padding: 40px 0;
     height: 100px;
     width: 98px;
     fill: #fff;
@@ -576,7 +944,7 @@ p {
   }
 
   .footer_bottom_inscription {
-    padding: 12px 0 40px 0;
+    padding: 12px 0 40px;
     text-align: center;
     font-size: 12px;
   }
