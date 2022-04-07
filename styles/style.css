@@ -489,6 +489,7 @@ button {
 }
 
 .sing_up_button {
+  margin-top: 20px;
   font-size: 18px;
   font-weight: 400;
   width: 128px;
@@ -506,6 +507,104 @@ button {
 }
 
 .sing_up_button_media {
+  display: none;
+}
+
+/* GUESTS REVIEWS BLOCK */
+.title_guests_media {
+  display: none;
+}
+
+.guests_row {
+  display: flex;
+  justify-content: space-between;
+  padding: 84px 0 100px;
+  position: relative;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.guests_item {
+  background-color: #eaf0f9;
+  margin: 0 8px 20px;
+}
+
+.guests_item_photo {
+  position: relative;
+}
+
+.quests_photo_filter {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 8.33%;
+  padding-left: 24px;
+  background-color: rgba(56, 56, 56, 0.7);
+  color: #fff;
+  top: 91%;
+}
+
+.guests_item_photo:hover .quests_photo_filter {
+  display: flex;
+  align-items: center;
+}
+
+.quests_photo_filter_price {
+  font-weight: 500;
+  padding-left: 4px;
+}
+
+.guests_item_review {
+  margin-top: 0;
+  padding: 24px;
+}
+
+.quests_item_review_place_rate {
+  display: flex;
+  justify-content: space-between;
+  color: #3077c6;
+  margin-bottom: 28px;
+}
+
+.guests_item_review_place_type {
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.guests_item_review_rate {
+  display: flex;
+  flex-direction: column;
+  color: #bfbfbf;
+}
+
+.guests_item_review_img > img {
+  float: right;
+  margin-bottom: 8px;
+}
+
+.quests_item_review_user {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.quests_item_user_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 16px;
+}
+
+.quests_item_review_comment {
+  width: 352px;
+}
+
+.guests_arrow {
+  position: absolute;
+  top: 27%;
+  left: 98%;
+}
+
+.guests_nav_media {
   display: none;
 }
 
@@ -580,11 +679,20 @@ button {
     flex-wrap: wrap;
   }
 
+  .homes_arrow {
+    display: none;
+  }
+
   .destinations_row {
     flex-wrap: wrap;
   }
 
-  .homes_arrow {
+  .guests_row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .guests_arrow {
     display: none;
   }
 }
@@ -908,6 +1016,54 @@ button {
 
   .sing_up_main_info_linebreak {
     display: flex;
+  }
+
+  .guests_container_background {
+    background-color: #eaf0f9;
+  }
+
+  .title_guests_main {
+    display: none;
+  }
+
+  .title_guests_media {
+    display: block;
+  }
+
+  .guests_row {
+    padding: 0 0 32px;
+    font-size: 15px;
+  }
+
+  .guests_item {
+    display: none;
+  }
+
+  .guests_item_media {
+    display: block;
+    width: 100%;
+  }
+
+  .guests_item_photo > img {
+    width: 100%;
+  }
+
+  .guests_item_review {
+    padding: 12px 0 0;
+  }
+
+  .quests_item_review_place_rate {
+    margin-bottom: 12px;
+  }
+
+  .quests_item_review_comment {
+    width: 100%;
+  }
+
+  .guests_nav_media {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
   }
 
   .footer_info_logo_img {
