@@ -326,6 +326,31 @@
           d="M83.5 29.3333H57.2083L61.1667 10.2916L61.2917 8.95829C61.2917 7.24996 60.5833 5.66663 59.4583 4.54163L55.0417 0.166626L27.625 27.625C26.0833 29.125 25.1667 31.2083 25.1667 33.5V75.1666C25.1667 79.75 28.9167 83.5 33.5 83.5H71C74.4583 83.5 77.4167 81.4166 78.6667 78.4166L91.25 49.0416C91.625 48.0833 91.8333 47.0833 91.8333 46V37.6666C91.8333 33.0833 88.0833 29.3333 83.5 29.3333ZM83.5 46L71 75.1666H33.5V33.5L51.5833 15.4166L46.9583 37.6666H83.5V46ZM0.166656 33.5H16.8333V83.5H0.166656V33.5Z"
         />
       </symbol>
+      <symbol id="arrow" viewBox="0 0 9 21">
+        <path
+          d="M0.941176 19.8235L7.1 11.6118C7.63333 10.9007 7.63333 9.92288 7.1 9.21177L0.941176 1"
+          stroke="#383838"
+          stroke-width="2"
+        />
+      </symbol>
+      <symbol id="cross" viewBox="0 0 26 26">
+        <path
+          d="M26 1.4857L24.5144 0L13 11.5143L1.4857 0L0 1.4857L11.5143 13L0 24.5144L1.4857 26L13 14.4857L24.5144 26L26 24.5144L14.4857 13L26 1.4857Z"
+          fill="#BFBFBF"
+        />
+      </symbol>
+      <symbol id="guests_nav_media" viewBox="0 0 56 8" fill="none">
+        <circle cx="4" cy="4" r="4" fill="#333333" />
+        <circle cx="20" cy="4" r="3.5" stroke="#333333" />
+        <circle cx="36" cy="4" r="3.5" stroke="#333333" />
+        <circle cx="52" cy="4" r="3.5" stroke="#333333" />
+      </symbol>
+      <symbol id="quests_item_user" viewBox="0 0 64 64">
+        <path
+          d="M32 5.33337C17.28 5.33337 5.33331 17.28 5.33331 32C5.33331 46.72 17.28 58.6667 32 58.6667C46.72 58.6667 58.6666 46.72 58.6666 32C58.6666 17.28 46.72 5.33337 32 5.33337ZM32 13.3334C36.4266 13.3334 40 16.9067 40 21.3334C40 25.76 36.4266 29.3334 32 29.3334C27.5733 29.3334 24 25.76 24 21.3334C24 16.9067 27.5733 13.3334 32 13.3334ZM32 51.2C25.3333 51.2 19.44 47.7867 16 42.6134C16.08 37.3067 26.6666 34.4 32 34.4C37.3066 34.4 47.92 37.3067 48 42.6134C44.56 47.7867 38.6666 51.2 32 51.2Z"
+          fill="#BFBFBF"
+        />
+      </symbol>
     </svg>
     <header>
       <div class="header_background">
@@ -437,13 +462,16 @@
         <h2 class="title">Homes guests loves</h2>
         <div class="homes_row">
           <div class="homes_item homes_item_media">
-            <img src="./images/hotel_leopold.png" alt="Hotel Leopold" />
+            <img
+              src="./images/homes_guests_loves/hotel_leopold.png"
+              alt="Hotel Leopold"
+            />
             <p class="homes_item_title">Hotel Leopold</p>
             <p class="homes_item_place">Saint Petersburg, Russia</p>
           </div>
           <div class="homes_item homes_item_media">
             <img
-              src="./images/apartment_sunshine.png"
+              src="./images/homes_guests_loves/apartment_sunshine.png"
               alt="Apartment Sunshine"
             />
             <p class="homes_item_title">Apartment Sunshine</p>
@@ -453,20 +481,30 @@
             </p>
           </div>
           <div class="homes_item">
-            <img src="./images/villa_kunerad.png" alt="Villa Kunerad" />
+            <img
+              src="./images/homes_guests_loves/villa_kunerad.png"
+              alt="Villa Kunerad"
+            />
             <p class="homes_item_title">Villa Kunerad</p>
             <p class="homes_item_place">Vysokie Tatry, Slowakia</p>
           </div>
           <div class="homes_item">
-            <img src="./images/hostel_friendship.png" alt="Hostel Friendship" />
+            <img
+              src="./images/homes_guests_loves/hostel_friendship.png"
+              alt="Hostel Friendship"
+            />
             <p class="homes_item_title">Hostel Friendship</p>
             <p class="homes_item_place">Berlin, Germany</p>
           </div>
-          <div class="homes_arrow">
-            <img src="./images/arrow.png" alt="arrow" />
+          <div class="homes_arrow arrow_circle">
+            <svg class="arrow">
+              <use href="#arrow"></use>
+            </svg>
           </div>
-          <div class="homes_arrow_media">
-            <img src="./images/arrow_media.png" alt="arrow" />
+          <div class="homes_arrow_media arrow_circle">
+            <svg class="arrow">
+              <use href="#arrow"></use>
+            </svg>
           </div>
         </div>
       </div>
@@ -487,7 +525,7 @@
         <div class="destinations_row">
           <div class="destinations_item destinations_item_media">
             <div class="destinations_item_filter">
-              <img src="./images/maldives.png" alt="Maldives" />
+              <img src="./images/destinations/maldives.png" alt="Maldives" />
               <div class="destinations_filter"></div>
               <button class="destinations_booking_button">Book now</button>
             </div>
@@ -495,7 +533,7 @@
           </div>
           <div class="destinations_item destinations_item_media">
             <div class="destinations_item_filter">
-              <img src="./images/spain.png" alt="Spain" />
+              <img src="./images/destinations/spain.png" alt="Spain" />
               <div class="destinations_filter"></div>
               <button class="destinations_booking_button">Book now</button>
             </div>
@@ -503,7 +541,7 @@
           </div>
           <div class="destinations_item">
             <div class="destinations_item_filter">
-              <img src="./images/norway.png" alt="Norway" />
+              <img src="./images/destinations/norway.png" alt="Norway" />
               <div class="destinations_filter"></div>
               <button class="destinations_booking_button">Book now</button>
             </div>
@@ -511,38 +549,44 @@
           </div>
           <div class="destinations_item">
             <div class="destinations_item_filter">
-              <img src="./images/island.png" alt="Island" />
+              <img src="./images/destinations/island.png" alt="Island" />
               <div class="destinations_filter"></div>
               <button class="destinations_booking_button">Book now</button>
             </div>
             <p>Island</p>
           </div>
-          <div class="destinations_arrow_media">
-            <img src="./images/arrow_media.png" alt="arrow" />
+          <div class="destinations_arrow_media arrow_circle">
+            <svg class="arrow">
+              <use href="#arrow"></use>
+            </svg>
           </div>
         </div>
         <div class="destinations_arrow">
-          <img src="./images/arrow_destin.png" alt="arrow" />
+          <div class="arrow_circle arrow_rotate_down">
+            <svg class="arrow">
+              <use href="#arrow"></use>
+            </svg>
+          </div>
         </div>
       </section>
     </div>
     <div class="container">
       <div class="sing_up_container">
         <div class="sing_up_cross">
-          <img class="sing_up_cross_img" src="./images/cross.png" alt="close" />
-          <img
-            class="sing_up_cross_media"
-            src="./images/cross_media.png"
-            alt="close"
-          />
+          <svg class="sing_up_cross_svg">
+            <use href="#cross"></use>
+          </svg>
         </div>
         <div class="sing_up_logo_media">
-          <img src="./images/sing_up_logo_media.png" alt="logo Triphouse" />
+          <img
+            src="./images/sing_up/sing_up_logo_media.png"
+            alt="logo Triphouse"
+          />
         </div>
         <div class="sing_up_main">
           <img
             class="sing_up_main_user_icon"
-            src="./images/user.png"
+            src="./images/sing_up/user.png"
             alt="user_icon"
           />
           <article class="sing_up_main_info">
@@ -556,6 +600,169 @@
           </article>
         </div>
         <button class="sing_up_button_media">Install</button>
+      </div>
+    </div>
+    <div class="guests_container_background">
+      <div class="container">
+        <section>
+          <h2 class="title">
+            <span class="title_guests_main">Guests reviews</span
+            ><span class="title_guests_media">Reviews</span>
+          </h2>
+          <div class="guests_row">
+            <div class="guests_item guests_item_media">
+              <div class="guests_item_photo">
+                <img
+                  src="./images/guests_reviews/Ubud_Bali_Resort&SPA.png"
+                  alt="Ubud Bali Resort&SPA"
+                />
+                <div class="quests_photo_filter">
+                  From<span class="quests_photo_filter_price">250 USD</span>
+                </div>
+              </div>
+              <div class="guests_item_review">
+                <div class="quests_item_review_place_rate">
+                  <div class="guests_item_review_place">
+                    <p class="guests_item_review_place_type">
+                      Ubud Bali Resort&SPA
+                    </p>
+                    <p class="guests_item_review_place_country">
+                      Bali, Indonesia
+                    </p>
+                  </div>
+                  <div class="guests_item_review_rate">
+                    <p class="guests_item_review_rate_count">9,4</p>
+                    <p>1324 reviews</p>
+                  </div>
+                </div>
+                <div class="quests_item_review_user">
+                  <svg class="quests_item_user_svg">
+                    <use href="#quests_item_user"></use>
+                  </svg>
+                  <div class="quests_item_user_info">
+                    <div class="quests_item_user_info_name">Hanna Ivanova</div>
+                    <div class="quests_item_user_info_country">
+                      <img
+                        src="./images/guests_reviews/Ukraine.png"
+                        alt="Ukraine"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <p class="quests_item_review_comment">
+                  Great location, really pleasant and clean rooms, but the thing
+                  that makes this such a good place to stay are the staff. All
+                  of the people are incredibly helpful and generous with their
+                  time and advice.
+                </p>
+              </div>
+            </div>
+            <div class="guests_item">
+              <div class="guests_item_photo">
+                <img
+                  src="./images/guests_reviews/King_Kong_Hostel.png"
+                  alt="King Kong Hostel"
+                />
+                <div class="quests_photo_filter">
+                  From <span class="quests_photo_filter_price">40 USD</span>
+                </div>
+              </div>
+              <div class="guests_item_review">
+                <div class="quests_item_review_place_rate">
+                  <div class="guests_item_review_place">
+                    <p class="guests_item_review_place_type">
+                      King Kong Hostel
+                    </p>
+                    <p class="guests_item_review_place_country">
+                      Rotterdam, Netherlands
+                    </p>
+                  </div>
+                  <div class="guests_item_review_rate">
+                    <p class="guests_item_review_rate_count">8,9</p>
+                    <p>2016 reviews</p>
+                  </div>
+                </div>
+                <div class="quests_item_review_user">
+                  <svg class="quests_item_user_svg">
+                    <use href="#quests_item_user"></use>
+                  </svg>
+                  <div class="quests_item_user_info">
+                    <div class="quests_item_user_info_name">Adam Smith</div>
+                    <div class="quests_item_user_info_country">
+                      <img src="./images/guests_reviews/USA.png" alt="USA" />
+                    </div>
+                  </div>
+                </div>
+                <div class="quests_item_review_comment">
+                  I've been in this hostel for a month and here is the best
+                  hostel of all
+                  <p>
+                    Excellent management of excellent and ethical staff and
+                    bedrooms Bathrooms are always clean and excellent
+                  </p>
+                  Most importantly, those who work here are kind and
+                  good-natured.
+                </div>
+              </div>
+            </div>
+            <div class="guests_item">
+              <div class="guests_item_photo">
+                <img
+                  src="./images/guests_reviews/Rokoko_Hotel.png"
+                  alt="Rokoko Hotel"
+                />
+                <div class="quests_photo_filter">
+                  From <span class="quests_photo_filter_price">100 USD</span>
+                </div>
+              </div>
+              <div class="guests_item_review">
+                <div class="quests_item_review_place_rate">
+                  <div class="guests_item_review_place">
+                    <p class="guests_item_review_place_type">Rokoko Hotel</p>
+                    <p class="guests_item_review_place_country">
+                      Ourika, Marocco
+                    </p>
+                  </div>
+                  <div class="guests_item_review_rate">
+                    <p class="guests_item_review_rate_count">9,1</p>
+                    <p>815 reviews</p>
+                  </div>
+                </div>
+                <div class="quests_item_review_user">
+                  <svg class="quests_item_user_svg">
+                    <use href="#quests_item_user"></use>
+                  </svg>
+                  <div class="quests_item_user_info">
+                    <div class="quests_item_user_info_name">Anika Messer</div>
+                    <div class="quests_item_user_info_country">
+                      <img
+                        src="./images/guests_reviews/Germany.png"
+                        alt="Germany"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="quests_item_review_comment">
+                  Efficient, friendly, professional, and appropriately
+                  attentive. Great hotel in a great location. Easy access to all
+                  the surrounding historical sites. Staff is fantastic. Will
+                  definitely stay at this location during my next stay in
+                  Marocco.
+                </div>
+              </div>
+            </div>
+            <div class="guests_arrow arrow_circle">
+              <svg class="arrow">
+                <use href="#arrow"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="guests_nav_media">
+            <svg class="guests_nav_media_svg">
+              <use href="#guests_nav_media"></use>
+            </svg>
+          </div>
+        </section>
       </div>
     </div>
     <footer>
