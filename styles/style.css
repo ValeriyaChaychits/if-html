@@ -78,6 +78,11 @@ button {
   box-shadow: 4px 0 4px rgba(0, 4, 4, 0.25);
 }
 
+.order_container {
+  display: flex;
+  flex-direction: column;
+}
+
 /* HEADER BLOCK */
 .header_background {
   background: #1212123f url("../images/header/castelmezzano.png") no-repeat top
@@ -482,6 +487,10 @@ input:focus ~ .apartment_type_label {
 }
 
 /* SING UP BLOCK*/
+.sing_up_order {
+  width: 100vw;
+}
+
 .sing_up_container {
   height: 200px;
   padding: 24px;
@@ -1261,6 +1270,14 @@ input:focus ~ .apartment_type_label {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .sing_up_order {
+    order: 2;
+  }
+
+  .guests_container {
+    order: 1;
   }
 
   .sing_up_main_user_icon {
