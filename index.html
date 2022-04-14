@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Information Technology" />
-    <meta name="keywords" content="HTML, HTTP" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
     <meta name="author" content="Intellect Fox's creators" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Triphouse project</title>
@@ -48,6 +48,12 @@
       <symbol id="nav_header_account" viewBox="0 0 40 40">
         <path
           d="M20 0C8.96 0 0 8.96 0 20C0 31.04 8.96 40 20 40C31.04 40 40 31.04 40 20C40 8.96 31.04 0 20 0ZM20 6C23.32 6 26 8.68 26 12C26 15.32 23.32 18 20 18C16.68 18 14 15.32 14 12C14 8.68 16.68 6 20 6ZM20 34.4C15 34.4 10.58 31.84 8 27.96C8.06 23.98 16 21.8 20 21.8C23.98 21.8 31.94 23.98 32 27.96C29.42 31.84 25 34.4 20 34.4Z"
+        />
+      </symbol>
+      <symbol id="nav_header_menu" viewBox="0 0 24 16">
+        <path
+          d="M0 16H24V13.3333H0V16ZM0 9.33333H24V6.66667H0V9.33333ZM0 0V2.66667H24V0H0Z"
+          fill="white"
         />
       </symbol>
       <symbol id="header_app_first" viewBox="0 0 135 40">
@@ -351,6 +357,21 @@
           fill="#BFBFBF"
         />
       </symbol>
+      <symbol id="main_info_destination_magnifier" viewBox="0 0 16 16">
+        <path
+          d="M11.4351 10.0629H10.7124L10.4563 9.81589C11.3528 8.77301 11.8925 7.4191 11.8925 5.94625C11.8925 2.66209 9.23042 0 5.94625 0C2.66209 0 0 2.66209 0 5.94625C0 9.23042 2.66209 11.8925 5.94625 11.8925C7.4191 11.8925 8.77301 11.3528 9.81589 10.4563L10.0629 10.7124V11.4351L14.6369 16L16 14.6369L11.4351 10.0629ZM5.94625 10.0629C3.66838 10.0629 1.82962 8.22413 1.82962 5.94625C1.82962 3.66838 3.66838 1.82962 5.94625 1.82962C8.22413 1.82962 10.0629 3.66838 10.0629 5.94625C10.0629 8.22413 8.22413 10.0629 5.94625 10.0629Z"
+          fill="#BFBFBF"
+        />
+      </symbol>
+      <symbol id="apartment_type_label_media_line" viewBox="0 0 1 32">
+        <line
+          x1="0.5"
+          y1="2.18557e-08"
+          x2="0.499999"
+          y2="32"
+          stroke="#BFBFBF"
+        />
+      </symbol>
     </svg>
     <header>
       <div class="header_background">
@@ -372,38 +393,88 @@
               <svg class="nav_header_account_svg">
                 <use href="#nav_header_account" /></svg
             ></a>
+            <svg class="nav_header_menu_svg">
+              <use href="#nav_header_menu"></use>
+            </svg>
           </nav>
           <section class="header_main">
             <h1 class="header_main_title">
               Discover stays <br />to live, work or just relax
             </h1>
-            <div class="header_main_labels">
-              <label for="main_info_destination"
-                >Your destination or hotel name</label
-              >
-              <label for="main_info_date">Check-in — Check-out</label>
-            </div>
-            <div class="header_main_info">
-              <input
-                id="main_info_destination"
-                type="text"
-                name="main_info_destination"
-                placeholder="New York"
-              />
-              <input
-                id="main_info_date"
-                type="text"
-                name="main_info_date"
-                placeholder="Tue 15 Sept — Sat 19 Sept"
-              />
-              <input
-                id="main_info_apartment_type"
-                type="text"
-                name="main_info_apartment_type"
-                placeholder="2 Adults — 0 Children — 1 Room"
-              />
+            <form action="/" method="post" class="header_main_info">
+              <div class="main_info_destination">
+                <input
+                  id="main_info_destination"
+                  type="text"
+                  name="main_info_destination"
+                />
+                <label class="destination_label" for="main_info_destination">
+                  <svg class="main_info_destination_magnifier_svg">
+                    <use href="#main_info_destination_magnifier"></use>
+                  </svg>
+                  Your destination or hotel name</label
+                >
+              </div>
+              <div class="main_info_dates">
+                <div class="main_info_date">
+                  <input
+                    id="main_info_date_first"
+                    type="text"
+                    name="main_info_date"
+                  />
+                  <label class="date_label" for="main_info_date_first"
+                    >Check-in <span class="date_label_span_media">date</span>
+                    <p class="date_label_media">Tue 15 Sept 2020</p>
+                  </label>
+                </div>
+                <div class="main_info_date">
+                  <input
+                    id="main_info_date_second"
+                    type="text"
+                    name="main_info_date"
+                  />
+                  <label class="date_label" for="main_info_date_second"
+                    >Check-out <span class="date_label_span_media">date</span>
+                    <p class="date_label_media">Sat 19 Sept 2020</p>
+                  </label>
+                </div>
+              </div>
+              <div class="main_info_apartment_type">
+                <input
+                  id="main_info_apartment_type"
+                  type="text"
+                  name="main_info_apartment_type"
+                />
+                <label
+                  class="apartment_type_label"
+                  for="main_info_apartment_type"
+                  ><span class="apartment_type_label_main"
+                    >2 Adults — 0 Children — 1 Room</span
+                  >
+                  <div class="apartment_type_label_media">
+                    <div class="apartment_type_label_media_item">
+                      <p>Adults</p>
+                      <p class="apartment_type_label_media_item_quantity">2</p>
+                    </div>
+                    <svg class="apartment_type_label_media_line_svg">
+                      <use href="#apartment_type_label_media_line"></use>
+                    </svg>
+                    <div class="apartment_type_label_media_item">
+                      <p>Children</p>
+                      <p class="apartment_type_label_media_item_quantity">0</p>
+                    </div>
+                    <svg class="apartment_type_label_media_line_svg">
+                      <use href="#apartment_type_label_media_line"></use>
+                    </svg>
+                    <div class="apartment_type_label_media_item">
+                      <p>Rooms</p>
+                      <p class="apartment_type_label_media_item_quantity">1</p>
+                    </div>
+                  </div>
+                </label>
+              </div>
               <button class="main_info_search_button">Search</button>
-            </div>
+            </form>
           </section>
           <div class="header_apps">
             <a href="#">
@@ -570,199 +641,203 @@
         </div>
       </section>
     </div>
-    <div class="container">
-      <div class="sing_up_container">
-        <div class="sing_up_cross">
-          <svg class="sing_up_cross_svg">
-            <use href="#cross"></use>
-          </svg>
-        </div>
-        <div class="sing_up_logo_media">
-          <img
-            src="./images/sing_up/sing_up_logo_media.png"
-            alt="logo Triphouse"
-          />
-        </div>
-        <div class="sing_up_main">
-          <img
-            class="sing_up_main_user_icon"
-            src="./images/sing_up/user.png"
-            alt="user_icon"
-          />
-          <article class="sing_up_main_info">
-            <p>
-              Sign up
-              <span class="sing_up_main_info_media">in the app</span> and get
-              20%<span class="sing_up_main_info_linebreak"></span>off your first
-              booking
-            </p>
-            <button class="sing_up_button">Sign up</button>
-          </article>
-        </div>
-        <button class="sing_up_button_media">Install</button>
-      </div>
-    </div>
-    <div class="guests_container_background">
-      <div class="container">
-        <section>
-          <h2 class="title">
-            <span class="title_guests_main">Guests reviews</span
-            ><span class="title_guests_media">Reviews</span>
-          </h2>
-          <div class="guests_row">
-            <div class="guests_item guests_item_media">
-              <div class="guests_item_photo">
-                <img
-                  src="./images/guests_reviews/Ubud_Bali_Resort&SPA.png"
-                  alt="Ubud Bali Resort&SPA"
-                />
-                <div class="quests_photo_filter">
-                  From<span class="quests_photo_filter_price">250 USD</span>
-                </div>
-              </div>
-              <div class="guests_item_review">
-                <div class="quests_item_review_place_rate">
-                  <div class="guests_item_review_place">
-                    <p class="guests_item_review_place_type">
-                      Ubud Bali Resort&SPA
-                    </p>
-                    <p class="guests_item_review_place_country">
-                      Bali, Indonesia
-                    </p>
-                  </div>
-                  <div class="guests_item_review_rate">
-                    <p class="guests_item_review_rate_count">9,4</p>
-                    <p>1324 reviews</p>
-                  </div>
-                </div>
-                <div class="quests_item_review_user">
-                  <svg class="quests_item_user_svg">
-                    <use href="#quests_item_user"></use>
-                  </svg>
-                  <div class="quests_item_user_info">
-                    <div class="quests_item_user_info_name">Hanna Ivanova</div>
-                    <div class="quests_item_user_info_country">
-                      <img
-                        src="./images/guests_reviews/Ukraine.png"
-                        alt="Ukraine"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <p class="quests_item_review_comment">
-                  Great location, really pleasant and clean rooms, but the thing
-                  that makes this such a good place to stay are the staff. All
-                  of the people are incredibly helpful and generous with their
-                  time and advice.
-                </p>
-              </div>
-            </div>
-            <div class="guests_item">
-              <div class="guests_item_photo">
-                <img
-                  src="./images/guests_reviews/King_Kong_Hostel.png"
-                  alt="King Kong Hostel"
-                />
-                <div class="quests_photo_filter">
-                  From <span class="quests_photo_filter_price">40 USD</span>
-                </div>
-              </div>
-              <div class="guests_item_review">
-                <div class="quests_item_review_place_rate">
-                  <div class="guests_item_review_place">
-                    <p class="guests_item_review_place_type">
-                      King Kong Hostel
-                    </p>
-                    <p class="guests_item_review_place_country">
-                      Rotterdam, Netherlands
-                    </p>
-                  </div>
-                  <div class="guests_item_review_rate">
-                    <p class="guests_item_review_rate_count">8,9</p>
-                    <p>2016 reviews</p>
-                  </div>
-                </div>
-                <div class="quests_item_review_user">
-                  <svg class="quests_item_user_svg">
-                    <use href="#quests_item_user"></use>
-                  </svg>
-                  <div class="quests_item_user_info">
-                    <div class="quests_item_user_info_name">Adam Smith</div>
-                    <div class="quests_item_user_info_country">
-                      <img src="./images/guests_reviews/USA.png" alt="USA" />
-                    </div>
-                  </div>
-                </div>
-                <div class="quests_item_review_comment">
-                  I've been in this hostel for a month and here is the best
-                  hostel of all
-                  <p>
-                    Excellent management of excellent and ethical staff and
-                    bedrooms Bathrooms are always clean and excellent
-                  </p>
-                  Most importantly, those who work here are kind and
-                  good-natured.
-                </div>
-              </div>
-            </div>
-            <div class="guests_item">
-              <div class="guests_item_photo">
-                <img
-                  src="./images/guests_reviews/Rokoko_Hotel.png"
-                  alt="Rokoko Hotel"
-                />
-                <div class="quests_photo_filter">
-                  From <span class="quests_photo_filter_price">100 USD</span>
-                </div>
-              </div>
-              <div class="guests_item_review">
-                <div class="quests_item_review_place_rate">
-                  <div class="guests_item_review_place">
-                    <p class="guests_item_review_place_type">Rokoko Hotel</p>
-                    <p class="guests_item_review_place_country">
-                      Ourika, Marocco
-                    </p>
-                  </div>
-                  <div class="guests_item_review_rate">
-                    <p class="guests_item_review_rate_count">9,1</p>
-                    <p>815 reviews</p>
-                  </div>
-                </div>
-                <div class="quests_item_review_user">
-                  <svg class="quests_item_user_svg">
-                    <use href="#quests_item_user"></use>
-                  </svg>
-                  <div class="quests_item_user_info">
-                    <div class="quests_item_user_info_name">Anika Messer</div>
-                    <div class="quests_item_user_info_country">
-                      <img
-                        src="./images/guests_reviews/Germany.png"
-                        alt="Germany"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div class="quests_item_review_comment">
-                  Efficient, friendly, professional, and appropriately
-                  attentive. Great hotel in a great location. Easy access to all
-                  the surrounding historical sites. Staff is fantastic. Will
-                  definitely stay at this location during my next stay in
-                  Marocco.
-                </div>
-              </div>
-            </div>
-            <div class="guests_arrow arrow_circle">
-              <svg class="arrow">
-                <use href="#arrow"></use>
-              </svg>
-            </div>
-          </div>
-          <div class="guests_nav_media">
-            <svg class="guests_nav_media_svg">
-              <use href="#guests_nav_media"></use>
+    <div class="order_container">
+      <div class="container sing_up_order">
+        <div class="sing_up_container">
+          <div class="sing_up_cross">
+            <svg class="sing_up_cross_svg">
+              <use href="#cross"></use>
             </svg>
           </div>
-        </section>
+          <div class="sing_up_logo_media">
+            <img
+              src="./images/sing_up/sing_up_logo_media.png"
+              alt="logo Triphouse"
+            />
+          </div>
+          <div class="sing_up_main">
+            <img
+              class="sing_up_main_user_icon"
+              src="./images/sing_up/user.png"
+              alt="user_icon"
+            />
+            <article class="sing_up_main_info">
+              <p>
+                Sign up
+                <span class="sing_up_main_info_media">in the app</span> and get
+                20%<span class="sing_up_main_info_linebreak"></span>off your
+                first booking
+              </p>
+              <button class="sing_up_button">Sign up</button>
+            </article>
+          </div>
+          <button class="sing_up_button_media">Install</button>
+        </div>
+      </div>
+      <div class="guests_container_background guests_container">
+        <div class="container">
+          <section>
+            <h2 class="title">
+              <span class="title_guests_main">Guests reviews</span
+              ><span class="title_guests_media">Reviews</span>
+            </h2>
+            <div class="guests_row">
+              <div class="guests_item guests_item_media">
+                <div class="guests_item_photo">
+                  <img
+                    src="./images/guests_reviews/Ubud_Bali_Resort&SPA.png"
+                    alt="Ubud Bali Resort&SPA"
+                  />
+                  <div class="quests_photo_filter">
+                    From<span class="quests_photo_filter_price">250 USD</span>
+                  </div>
+                </div>
+                <div class="guests_item_review">
+                  <div class="quests_item_review_place_rate">
+                    <div class="guests_item_review_place">
+                      <p class="guests_item_review_place_type">
+                        Ubud Bali Resort&SPA
+                      </p>
+                      <p class="guests_item_review_place_country">
+                        Bali, Indonesia
+                      </p>
+                    </div>
+                    <div class="guests_item_review_rate">
+                      <p class="guests_item_review_rate_count">9,4</p>
+                      <p>1324 reviews</p>
+                    </div>
+                  </div>
+                  <div class="quests_item_review_user">
+                    <svg class="quests_item_user_svg">
+                      <use href="#quests_item_user"></use>
+                    </svg>
+                    <div class="quests_item_user_info">
+                      <div class="quests_item_user_info_name">
+                        Hanna Ivanova
+                      </div>
+                      <div class="quests_item_user_info_country">
+                        <img
+                          src="./images/guests_reviews/Ukraine.png"
+                          alt="Ukraine"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <p class="quests_item_review_comment">
+                    Great location, really pleasant and clean rooms, but the
+                    thing that makes this such a good place to stay are the
+                    staff. All of the people are incredibly helpful and generous
+                    with their time and advice.
+                  </p>
+                </div>
+              </div>
+              <div class="guests_item">
+                <div class="guests_item_photo">
+                  <img
+                    src="./images/guests_reviews/King_Kong_Hostel.png"
+                    alt="King Kong Hostel"
+                  />
+                  <div class="quests_photo_filter">
+                    From <span class="quests_photo_filter_price">40 USD</span>
+                  </div>
+                </div>
+                <div class="guests_item_review">
+                  <div class="quests_item_review_place_rate">
+                    <div class="guests_item_review_place">
+                      <p class="guests_item_review_place_type">
+                        King Kong Hostel
+                      </p>
+                      <p class="guests_item_review_place_country">
+                        Rotterdam, Netherlands
+                      </p>
+                    </div>
+                    <div class="guests_item_review_rate">
+                      <p class="guests_item_review_rate_count">8,9</p>
+                      <p>2016 reviews</p>
+                    </div>
+                  </div>
+                  <div class="quests_item_review_user">
+                    <svg class="quests_item_user_svg">
+                      <use href="#quests_item_user"></use>
+                    </svg>
+                    <div class="quests_item_user_info">
+                      <div class="quests_item_user_info_name">Adam Smith</div>
+                      <div class="quests_item_user_info_country">
+                        <img src="./images/guests_reviews/USA.png" alt="USA" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="quests_item_review_comment">
+                    I've been in this hostel for a month and here is the best
+                    hostel of all
+                    <p>
+                      Excellent management of excellent and ethical staff and
+                      bedrooms Bathrooms are always clean and excellent
+                    </p>
+                    Most importantly, those who work here are kind and
+                    good-natured.
+                  </div>
+                </div>
+              </div>
+              <div class="guests_item">
+                <div class="guests_item_photo">
+                  <img
+                    src="./images/guests_reviews/Rokoko_Hotel.png"
+                    alt="Rokoko Hotel"
+                  />
+                  <div class="quests_photo_filter">
+                    From <span class="quests_photo_filter_price">100 USD</span>
+                  </div>
+                </div>
+                <div class="guests_item_review">
+                  <div class="quests_item_review_place_rate">
+                    <div class="guests_item_review_place">
+                      <p class="guests_item_review_place_type">Rokoko Hotel</p>
+                      <p class="guests_item_review_place_country">
+                        Ourika, Marocco
+                      </p>
+                    </div>
+                    <div class="guests_item_review_rate">
+                      <p class="guests_item_review_rate_count">9,1</p>
+                      <p>815 reviews</p>
+                    </div>
+                  </div>
+                  <div class="quests_item_review_user">
+                    <svg class="quests_item_user_svg">
+                      <use href="#quests_item_user"></use>
+                    </svg>
+                    <div class="quests_item_user_info">
+                      <div class="quests_item_user_info_name">Anika Messer</div>
+                      <div class="quests_item_user_info_country">
+                        <img
+                          src="./images/guests_reviews/Germany.png"
+                          alt="Germany"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="quests_item_review_comment">
+                    Efficient, friendly, professional, and appropriately
+                    attentive. Great hotel in a great location. Easy access to
+                    all the surrounding historical sites. Staff is fantastic.
+                    Will definitely stay at this location during my next stay in
+                    Marocco.
+                  </div>
+                </div>
+              </div>
+              <div class="guests_arrow arrow_circle">
+                <svg class="arrow">
+                  <use href="#arrow"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="guests_nav_media">
+              <svg class="guests_nav_media_svg">
+                <use href="#guests_nav_media"></use>
+              </svg>
+            </div>
+          </section>
+        </div>
       </div>
     </div>
     <footer>
